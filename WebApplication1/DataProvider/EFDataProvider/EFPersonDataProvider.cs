@@ -60,7 +60,10 @@ namespace Proje1.DataProvider.EFDataProvider
             {
 
 
-                    return mcontext.Persons.Where(x => (x.Department.Contains(searchDepartment) && x.Address.Contains(searchLocation) && x.Name.Contains(searchName))  && (x.Department.Contains(searchDepartment) || x.Address.Contains(searchLocation) || x.Name.Contains(searchName)) || (searchName == null && searchLocation == null && searchDepartment == null)).ToList();
+                  return mcontext.Persons.Where(x => (x.Department.Contains(searchDepartment) && x.Address.Contains(searchLocation) && x.Name.Contains(searchName)) 
+                    || ((x.Department.Contains(searchDepartment) && x.Address.Contains(searchLocation)) || (x.Name.Contains(searchName) && x.Address.Contains(searchLocation)) || (x.Department.Contains(searchDepartment) && x.Name.Contains(searchName)))
+                    || ((searchName == null && searchLocation == null) && x.Department.Contains(searchDepartment) || (searchLocation == null && searchDepartment == null) && x.Name.Contains(searchName) || (searchName == null && searchDepartment == null) && x.Address.Contains(searchLocation))
+                    || (searchName == null && searchLocation == null && searchDepartment == null)).ToList();
                 
             
                   
