@@ -1,0 +1,220 @@
+﻿@model Proje1.Models.Person
+@{
+    ViewData["Title"] = "GetPerson";
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex justify-content-between">
+
+        <div class="logo">
+            <h1><a href="index.html"><span>e</span>Business</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        </div>
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+                <li><a class="nav-link scrollto" href="#about">About</a></li>
+                <li><a class="nav-link scrollto" href="#services">Services</a></li>
+                <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
+                <li><a class="nav-link scrollto" href="#team">Team</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li class="dropdown">
+                    <a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="#">Drop Down 1</a></li>
+                        <li class="dropdown">
+                            <a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                            <ul>
+                                <li><a href="#">Deep Drop Down 1</a></li>
+                                <li><a href="#">Deep Drop Down 2</a></li>
+                                <li><a href="#">Deep Drop Down 3</a></li>
+                                <li><a href="#">Deep Drop Down 4</a></li>
+                                <li><a href="#">Deep Drop Down 5</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Drop Down 2</a></li>
+                        <li><a href="#">Drop Down 3</a></li>
+                        <li><a href="#">Drop Down 4</a></li>
+                    </ul>
+                </li>
+                <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+    </div>
+</header><!-- End Header -->
+<br />
+<br />
+<div >
+    <main id="main">
+
+        <!-- ======= About Section ======= -->
+        <div id="about" class="about-area area-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="section-headline text-center">
+                            <h2>About Me</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-6 col-xs-12">
+                    <div class="well-middle">
+                        <div class="single-well">
+                            <a href="#">
+                                <h4 class="sec-head">project Maintenance</h4>
+                            </a>
+                            <div id="resume" class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="card mb-3">
+                                        <div class="row no-gutters">
+                                            <div class="col-md-3 team-img">
+                                                @*<img src="@Model.ImageUrl" class="card-img" />*@
+                                                <a href="#">
+                                                    <img src="~/@Model.ImageUrl" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <div class="card-body">
+                                                    <h5 class="=card-title">@Model.Name</h5>
+                                                    <p class="card-text">@Model.Department</p>
+                                                    <p class="card-text">
+                                                        <small class="text-muted">@Model.Address</small>
+                                                    </p>
+                                                    <div class="profile-agileinfo">
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet sem sit amet dolor luctus pellentesque. Pellentesque eleifend tellus at interdum elementum. Nam egestas molestie elit. Vivamus sed accumsan quam, a mollis magna. Nam aliquet eros eget sapien consequat tincidunt at vel nibh. Duis ut turpis mi. Duis nec scelerisque urna, sit amet varius arcu. Aliquam aliquet sapien quis mauris semper suscipit. Maecenas pharetra dapibus posuere. </p>
+
+                                                        <div class="col-md-4 col-xs-4 profile-grids">
+                                                            <i class="fa fa-envelope"></i>
+                                                            <h5>Contact Me</h5>
+                                                            <ul class="address">
+                                                                <li>
+                                                                    <b>PHONE</b> :  @Model.Phone
+                                                                </li>
+                                                                <li>
+                                                                    <b>FAX</b> :  +15 555 5678
+                                                                </li>
+                                                                <li>
+                                                                    <b>ADDRESS</b> : 756 gb Place,NS Canada
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-md-4 col-xs-4 profile-grids">
+                                                            <i class="fa fa-share-alt"></i>
+                                                            <h5>Comments</h5>
+                                                            <ul class="address">
+                                                                <li>
+                                                                    <b>E-MAIL</b> : <a href="mailto:example@mail.com">@Model.Email</a>
+                                                                </li>
+                                                                <li>
+                                                                    <b>WEBSITE</b> : <a href="#">@Model.Website</a>
+                                                                </li>
+                                                                <li>
+                                                                    <b>TWITTER</b> : <a href="#">@Model.Twitter </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="clearfix"> </div>
+                                                    </div>
+
+
+
+                                                    <button type="button" onclick="myFunction()" class="btn btn-primary btn-sm">MY EDUCATION</button>
+                                                    <button type="button" onclick="myFunction2()" class="btn btn-secondary btn-sm">WORK EXPERIENCE</button>
+
+                                                    <button onclick="generatePDF()" type="button" class="btn btn-outline-info">Pdf</button>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+
+                    <div class="container" id="myDIV" style="display:none; width: 100%">
+                        <div class="panel-group">
+                            @foreach (var edu in ViewBag.educations)
+                            {
+                                <div class="panel panel-danger">
+                                    <div class="panel-heading">@edu.DegreeLevel</div>
+                                    <div class="panel-body">
+                                        <p>@edu.UniversityName</p>
+                                        <p>@edu.DepartmentName</p>
+                                        <p>@edu.GPA</p>
+                                        <p>@edu.StartDate.ToString("yyyy MMMM")- @edu.TerminationDate.ToString("yyyy MMMM")</p>
+
+                                    </div>
+                                </div>
+                            }
+
+
+
+
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="container" id="myDIV2" style="display:none; width: 100%">
+                        <div class="panel-group">
+                            @foreach (var exp in ViewBag.experiences)
+                            {
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">@exp.JobPosition</div>
+                                    <div class="panel-body">
+                                        <p>@exp.CompanyName</p>
+                                        <p>@exp.StartDate.ToString("yyyy MMMM") - @exp.TerminationDate.ToString("yyyy MMMM")</p>
+                                        <p>@exp.Location</p>
+                                    </div>
+                                </div>
+                            }
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    function myFunction() {
+                        $("#myDIV").show();
+                        $("#myDIV2").hide();
+                    }
+                    function myFunction2() {
+                        $("#myDIV").hide();
+                        $("#myDIV2").show();
+                    }
+                </script>
+
+                -
+            </div>
+        </div><!-- End About Section -->
+        <!-- ======= Team Section ======= -->
+    </main><!-- End #main -->
+
+</div>
